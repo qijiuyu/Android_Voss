@@ -45,6 +45,8 @@
         </activity>
 
         <activity android:name=".user.setting.SettingActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".user.setting.SetUserInfoActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".user.setting.CertificationActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

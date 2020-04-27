@@ -34,96 +34,122 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="真实姓名"
-            android:textSize="15sp"
-            android:textColor="@android:color/black"
-            android:layout_centerVertical="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/et_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="请输入您的姓名"
-            android:textSize="15sp"
-            android:textColor="@color/color_676868"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
 
-    </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="真实姓名"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="@color/color_EBEBEB"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"/>
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="请输入您的姓名"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_676868"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_EBEBEB"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"/>
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="身份证号"
-            android:textSize="15sp"
-            android:textColor="@android:color/black"
-            android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"/>
 
-        <EditText
-            android:id="@+id/et_code"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="请输入您的身份证号"
-            android:textSize="15sp"
-            android:textColor="@color/color_676868"
-            android:digits="0123456789Xx"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"/>
+                <EditText
+                    android:id="@+id/et_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="请输入您的身份证号"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_676868"
+                    android:digits="0123456789Xx"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
 
-    </RelativeLayout>
+            </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@color/color_F9F9F9"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_F9F9F9"/>
 
-    <ImageView
-        android:id="@+id/img_zm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:src="@mipmap/bg_sfz_zm"
-        android:layout_marginTop="20dp"/>
+            <ImageView
+                android:id="@+id/img_zm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/bg_sfz_zm"
+                android:layout_marginTop="20dp"/>
 
-    <ImageView
-        android:id="@+id/img_fm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:src="@mipmap/bg_sfz_fm"
-        android:layout_marginTop="20dp"/>
+            <ImageView
+                android:id="@+id/img_fm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/bg_sfz_fm"
+                android:layout_marginTop="20dp"/>
 
-    <ImageView
-        android:id="@+id/img_sc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:src="@mipmap/bg_sfz_sc"
-        android:layout_marginTop="20dp"/>
+            <ImageView
+                android:id="@+id/img_sc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/bg_sfz_sc"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_676868"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="22dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginLeft="37dp"
+                android:text="申请"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
