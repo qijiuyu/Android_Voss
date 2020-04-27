@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'android-apt'
 android {
     compileSdkVersion Integer.parseInt(COMPLIE_SDK_VERSION)
     buildToolsVersion BUILDTOLLS_VERSION
@@ -44,8 +44,10 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':module_util')
-    compile 'com.jakewharton:butterknife:8.2.1'
-    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+//    compile 'com.jakewharton:butterknife:8.8.1'
+//    apt 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
 //    //极光推送
 //    compile 'cn.jiguang.sdk:jpush:3.5.6'
 //    compile 'cn.jiguang.sdk:jcore:2.2.8'

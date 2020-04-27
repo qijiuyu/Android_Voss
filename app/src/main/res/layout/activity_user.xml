@@ -5,32 +5,656 @@
     android:orientation="vertical"
     android:background="@android:color/white">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-        <ImageView
-            android:id="@+id/img_setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/setting"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/img_qrcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/user_qrcode"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="68dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
-    </RelativeLayout>
+                <ImageView
+                    android:id="@+id/img_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/setting"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"/>
 
-    <com.zxdc.utils.library.view.CircleImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:background="@color/color_33333"/>
+                <ImageView
+                    android:id="@+id/img_qrcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/user_qrcode"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="68dp"/>
+
+            </RelativeLayout>
+
+            <com.zxdc.utils.library.view.CircleImageView
+                android:id="@+id/img_head"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@mipmap/aa"
+                android:layout_marginTop="38dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="韩世墨"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/img_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/members"
+                    android:layout_marginLeft="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="/ VOSS以点滴浸润美好人生 /"
+                android:textSize="12sp"
+                android:textColor="@color/color_676868"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tv_sign"
+                android:layout_width="90dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_user_sign"
+                android:text="签到"
+                android:textColor="@color/color_676868"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+
+                <TextView
+                    android:id="@+id/tv_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/order_icon"
+                    android:drawablePadding="15dp"
+                    android:text="我的订单"
+                    android:textColor="@color/color_676868"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_dynamic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/dynamic"
+                    android:drawablePadding="15dp"
+                    android:text="我的动态"
+                    android:textColor="@color/color_676868"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_integral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/integral"
+                    android:drawablePadding="15dp"
+                    android:text="积分商城"
+                    android:textColor="@color/color_676868"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/tv_coupons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/coupons"
+                    android:drawablePadding="15dp"
+                    android:text="优惠券"
+                    android:textColor="@color/color_676868"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_EBEBEB"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:background="@color/color_949596"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会员权益V享卡"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:background="@color/color_949596"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:id="@+id/lin_member"
+                    android:layout_width="185dp"
+                    android:layout_height="175dp"
+                    android:background="@color/color_F9F9F9"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@mipmap/member_big"
+                        android:text="会员权益"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:drawablePadding="25dp"/>
+
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/lin_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="118dp"
+                    android:background="@color/color_F9F9F9"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="205dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/vip_big"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:background="@color/color_949596"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收益"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:background="@color/color_949596"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:background="@color/color_F9F9F9">
+
+                    <TextView
+                        android:id="@+id/tv_earnings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥1000"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginTop="54.5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_666666"
+                        android:textSize="13sp"
+                        android:text="累计收益"
+                        android:layout_marginTop="38dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:background="@color/color_F9F9F9">
+
+                        <TextView
+                            android:id="@+id/tv_share_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥1000"
+                            android:textSize="15sp"
+                            android:textColor="@color/color_676868"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="19dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="邀请奖励"
+                            android:textColor="@color/color_666666"
+                            android:textSize="13sp"
+                            android:layout_marginTop="51.5dp"
+                            android:layout_marginLeft="20dp"/>
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="36dp"
+                            android:src="@mipmap/voss_logo"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="45dp"/>
+
+
+                        <LinearLayout
+                            android:id="@+id/lin_share"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:background="@color/color_cfDCEF">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="1"
+                                android:text="邀   请"
+                                android:textColor="@color/color_6E94CD"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/color_F9F9F9">
+
+                        <LinearLayout
+                            android:id="@+id/lin_withdrawal"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:background="@color/color_cfDCEF">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="1"
+                                android:text="提  现"
+                                android:textColor="@color/color_6E94CD"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="36dp"
+                            android:src="@mipmap/voss_logo"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="48dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_withdrawal_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥1000"
+                            android:textSize="15sp"
+                            android:textColor="@color/color_676868"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="19dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分销收益"
+                            android:textColor="@color/color_666666"
+                            android:textSize="13sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="51.5dp"
+                            android:layout_marginRight="20dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:background="@color/color_949596"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的智能水贴"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="1dp"
+                    android:background="@color/color_949596"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_setting_water"
+                android:layout_width="69dp"
+                android:layout_height="21dp"
+                android:background="@color/color_676868"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="设  置"
+                android:textSize="11sp"
+                android:textColor="@android:color/white"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="163dp"
+                    android:layout_marginTop="125dp"
+                    android:background="@color/color_F9F9F9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="95dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="温度"
+                                android:textColor="@color/color_676868"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15C"
+                                android:textSize="14sp"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="11.5dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:background="@color/color_D8D8D8"
+                            android:layout_gravity="center_vertical"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="湿度"
+                                android:textColor="@color/color_676868"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_humidity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15%rh"
+                                android:textSize="14sp"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="11.5dp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:background="@color/color_D8D8D8"
+                            android:layout_gravity="center_vertical"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PM2.5"
+                                android:textColor="@color/color_676868"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_pm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100μg/m³"
+                                android:textSize="14sp"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="11.5dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@mipmap/bb"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_total_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="购买家庭水总量   200m³"
+                android:textColor="@color/color_333333"
+                android:textSize="13sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/bg_user_sign"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/tv_the_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已使用量   100m³"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_333333"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="10dp"
+                    android:background="@color/color_cfDCEF"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/tv_balance_water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余水量   100m³"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_333333"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注：该数据从用户购买的家庭水订单自动获取并绑定"
+                android:textSize="11sp"
+                android:textColor="@color/color_6E94CD"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/tv_send_water"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="37dp"
+                android:layout_marginLeft="37dp"
+                android:background="@color/color_676868"
+                android:text="一键送水"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_F9F9F9"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/tv_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14.5dp"
+                android:layout_marginBottom="14.5dp"
+                android:drawableLeft="@mipmap/customer"
+                android:text="客服服务"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:drawablePadding="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_F9F9F9"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
