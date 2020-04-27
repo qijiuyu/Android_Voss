@@ -1,16 +1,16 @@
 package com.zxdc.utils.library.http.base;
 
-import android.text.TextUtils;
-
 import com.zxdc.utils.library.base.BaseApplication;
-import com.zxdc.utils.library.http.HttpApi;
 import com.zxdc.utils.library.util.LogUtils;
 import com.zxdc.utils.library.util.SPUtil;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
 import okhttp3.FormBody;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
@@ -36,20 +36,20 @@ public class LogInterceptor implements Interceptor {
         String body = response.body().string();
         //如果ACCESS_TOKEN失效，自动重新获取一次
         final int code = getCode(body);
-        if(code==-401){
-            UserInfo userInfo=refresh();
-            if(userInfo!=null && userInfo.isSussess()){
-                //存储token数据
-                SPUtil.getInstance(BaseApplication.getContext()).addString(SPUtil.TOKEN,userInfo.getToken());
-                if (request.method().equals("POST")) {
-                    request = addPostParameter(request);
-                }else{
-                    request = addGetParameter(request);
-                }
-                response = chain.proceed(request);
-                body = response.body().string();
-            }
-        }
+//        if(code==-401){
+//            UserInfo userInfo=refresh();
+//            if(userInfo!=null && userInfo.isSussess()){
+//                //存储token数据
+//                SPUtil.getInstance(BaseApplication.getContext()).addString(SPUtil.TOKEN,userInfo.getToken());
+//                if (request.method().equals("POST")) {
+//                    request = addPostParameter(request);
+//                }else{
+//                    request = addGetParameter(request);
+//                }
+//                response = chain.proceed(request);
+//                body = response.body().string();
+//            }
+//        }
         LogUtils.e(String.format("response %s in %.1fms%n%s", response.request().url(), (t2 - t1) / 1e6d, body));
         return response.newBuilder().body(ResponseBody.create(response.body().contentType(), body)).build();
     }
@@ -104,22 +104,6 @@ public class LogInterceptor implements Interceptor {
     }
 
 
-    /**
-     * 刷新token
-     * @throws IOException
-     */
-    private UserInfo refresh() throws IOException {
-        UserInfo userInfo;
-        String openId=SPUtil.getInstance(BaseApplication.getContext()).getString(SPUtil.OPEN_ID);
-        if(TextUtils.isEmpty(openId)){
-            final String mobile=SPUtil.getInstance(BaseApplication.getContext()).getString(SPUtil.ACCOUNT);
-            final String password=SPUtil.getInstance(BaseApplication.getContext()).getString(SPUtil.PASSWORD);
-            userInfo=Http.getRetrofitNoInterceptor().create(HttpApi.class).login(mobile,password).execute().body();
-        }else{
-            userInfo=Http.getRetrofitNoInterceptor().create(HttpApi.class).wxLogin(null,null,null,openId).execute().body();
-        }
-        return userInfo;
-    }
 
     public int getCode(String json) {
         int code = 0;
